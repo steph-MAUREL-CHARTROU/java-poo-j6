@@ -1,7 +1,9 @@
 package fr.diginamic.recensement;
 
+import java.io.IOException;
 import java.util.Scanner;
 
+import fr.diginamic.IntegrationRecensement;
 import fr.diginamic.exceptions.NanException;
 import fr.diginamic.recensement.entites.Recensement;
 import fr.diginamic.recensement.services.RechercheDepartementsPlusPeuplees;
@@ -26,10 +28,17 @@ public class Application {
 	 * Point d'entrée
 	 * 
 	 * @param args arguments (non utilisés ici)
+	 * @throws IOException 
 	 * @throws NanException
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		
+		//IntegrationRecensement insertion = new IntegrationRecensement(); // J'instancie ma classe d'insertion
+		//
+		//insertion.insertVille();
 		Scanner scanner = new Scanner(System.in);
+		
+		
 
 		String filePath = ClassLoader.getSystemClassLoader().getResource("recensement.csv").getFile();
 		Recensement recensement = RecensementUtils.lire(filePath);

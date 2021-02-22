@@ -34,7 +34,7 @@ public class RecherchePopulationBorneService extends MenuService {
 		
 		System.out.println("Choississez une population maximum (en milliers d'habitants): ");
 		String saisieMax = scanner.nextLine();
-		if (!NumberUtils.isCreatable(saisieMax)) {
+		if (!NumberUtils.isCreatable(saisieMax)) { // CORRECTION || saisieMin.contains(".)) 
 			throw new NanException(" Saisie Incorrecte // Veuillez saisir un nombre");
 		}
 

@@ -38,5 +38,4 @@ public class RecherchePopulationDepartementService extends MenuService {
 			System.out.println("Département "+choix+ " non trouvé.");
 		}
 	}
-
 }
